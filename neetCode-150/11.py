@@ -1,0 +1,12 @@
+def twoSum(numbers: list[int], target: int) -> list[int]:
+    k = 0
+    r = len(numbers) -1
+    
+    while r >= k:
+        val = numbers[r] + numbers[k]
+        if val == target:
+            return [k+1,r+1]
+        elif val > target:
+            r -= 1
+        else:
+            k += 1
